@@ -56,6 +56,3 @@ jobs:
       run: |
         docker push ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ env.sha_short }}
-
-    - name: Print Image URL
-      run: echo "Docker image pushed: ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest"
