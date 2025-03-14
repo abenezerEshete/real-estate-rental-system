@@ -21,8 +21,8 @@ jobs:
 
     - name: Build Spring Boot JAR
       run: |
-        chmod +x mvnw
-        ./mvnw clean package -DskipTests
+        chmod +x mvn
+        ./mvn clean package -DskipTests
 
     - name: Deploy to AWS EC2
       env:
