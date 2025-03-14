@@ -49,6 +49,7 @@ jobs:
 
     - name: Build and Tag Docker Image
       run: |
+        cd ./backend/real_estate_rental_system/
         docker build -t ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest .
         docker tag ${{ secrets.DOCKER_USERNAME }}/springboot-app:latest ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ env.sha_short }}
 
